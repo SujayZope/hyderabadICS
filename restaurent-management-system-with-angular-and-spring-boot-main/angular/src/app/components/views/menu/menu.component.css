@@ -1,0 +1,196 @@
+.wrapper{
+  position: absolute;
+
+}
+
+
+@media only screen and (max-width: 1920px) {
+  .sub{
+    margin-left: 27%;
+  }
+  .main{
+    margin-left: 19%;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .sub{
+    margin-left: 32%;
+  }
+  .main{
+    margin-left: 22%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .sub{
+    margin-left: 37%;
+  }
+  .main{
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .sub{
+    margin-left: 39%;
+  }
+  .main{
+    margin-left: 27%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .sub{
+    margin-left: 40%;
+  }
+  .main{
+    margin-left: 28%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sub{
+    margin-left: 53%;
+  }
+  .main{
+    margin-left: 36%;
+  }
+}
+
+
+@media  only screen and (max-width: 800px) {
+  .sub{
+    margin-left: 63%;
+  }
+  .main{
+    margin-left: 44%;
+  }
+}
+
+.side-bar-table {
+  border-bottom: 1px solid #ddd;
+
+}
+th{
+
+  margin-bottom: 2px;
+}
+tr{
+  text-align: center
+}
+
+.payment_bill_action_button{
+  background: #43e28e;
+  color: #1b1e21;
+}
+
+.action_button{
+  width:auto;
+  padding: 2px 8px 2px 8px;
+  background: #43e28e;
+  border: 5px #20c997;
+  border-radius:3px;
+}
+
+.action_button:hover{
+  width:auto;
+  padding: 2px 8px 2px 8px;
+  background: #11be8b;
+  border: 5px #20c997;
+  border-radius:3px;
+}
+
+.item-table{
+  width: 650px;
+  padding: 2px 2px 2px 2px;
+  border-bottom: 2px black;
+}
+.item-table tr:hover{
+  background: #b4ffcc;
+  border-radius: 3px;
+}
+.side-bar-table:hover {
+  background: #b4ffcc;
+  border-radius: 3px;
+  color: black;
+
+
+}
+.btnUpdateAndSubmit:hover{
+  background: #148F77 ;
+  border: none;
+}
+.side-bar{
+  position: absolute;
+}
+
+.sidenav {
+  position: absolute;
+  border: #0b2e13;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.my-custom-scrollbar2 {
+  position: relative;
+  height: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.my-custom-scrollbarPosBill {
+  position: relative;
+  height: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.table-wrapper-scroll-y{
+  display: block;
+}
+
+.sub{
+  overflow-y: scroll;
+}
+.btn-group button {
+  background-color: #58D68D ; /* Green background */
+  border: 1px solid #58D68D ; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #2ECC71 ;
+}
+.reason-modal{
+  width: 30%;
+  margin-left: 35%;
+}
+.exit:hover{
+  color: red;
+}
+.dicmode{
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<div class="wrapper fadeInDown image ">
+  <img class="pic" src="assets/tables/pos.jpg" alt="Simply Easy Learning"  style="position: absolute;width: 1350px;height:auto">
+  <div class="login" id="formContent" style="background-color: #2aa198;">
+    <!-- Tabs Titles -->
+    <h2 class="active" style="font-size: 50px; text-underline: #00a7d0;color: white;font-weight: bold"> Hotel - Key </h2>
+    <!-- Login Form -->
+    <form class="loginform"  style="font-family: something" >
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="User Name" style="height: 45px;"  [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" style="height: 45px" [(ngModel)]="user.pwCord" [ngModelOptions]="{standalone: true}">
+      <input type="submit" class="fadeIn fourth" value="Log In" data-toggle="modal"  data-target="#exampleModalCenter" style="height: 45px;color: white; font-size: 16px;font-weight: bold ">
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Select Restaurant</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tr *ngFor="let data of Restaurant" class="res_rows"><td (click)="login(data)" data-dismiss="modal">{{data.rName}}</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+

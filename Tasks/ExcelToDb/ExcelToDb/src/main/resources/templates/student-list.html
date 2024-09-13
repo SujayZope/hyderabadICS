@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student List</title>
+
+  <!-- Include Bootstrap styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+		body {
+			background-image: url("https://cdn.wallpapersafari.com/12/70/rmcq0h.jpg");
+			background-repeat: no-repeat;
+			background-size:cover;
+			background-position: center center;
+			background-attachment: fixed;
+			justify-content: center;
+		    margin:10px;
+			align-items: center;
+		}
+.navbar {
+	background-color:green;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 13px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2; /* Optional background color for table header */
+  }
+
+</style>
+<body>
+	<div>
+<nav class="navbar">
+	<h3>Progress Card.....</h3>
+<span><button class="btn btn-dark"><a href="/upload" style="color: white;">Back</a></button></span>
+</nav>
+</div>
+<div class="container mt-5">
+  <h1 class="mb-3">Student List</h1>
+
+  <table class="table table-striped">
+    <thead>
+    <tr class="table-primary">
+      <th>Hall Ticket Number</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>DOB</th>
+      <th>First Language</th>
+      <th>Second Language</th>
+      <th>Third Language</th>
+      <th>Mathematics</th>
+      <th>General Science</th>
+      <th>Social Studies</th>
+      <th>Grade</th>
+      <th>Status</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+      <td th:text="${student.hallticketNumber}"></td>
+      <td th:text="${student.firstName}"></td>
+      <td th:text="${student.lastName}"></td>
+      <td th:text="${student.dob}"></td>
+      <td th:text="${student.firstLanguage}"></td>
+      <td th:text="${student.secondLanguage}"></td>
+      <td th:text="${student.thirdLanguage}"></td>
+      <td th:text="${student.mathematics}"></td>
+      <td th:text="${student.generalScience}"></td>
+      <td th:text="${student.socialStudies}"></td>
+      <td th:text="${student.grade}"></td>
+      <td th:text="${student.status}"></td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

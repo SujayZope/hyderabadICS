@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="">
+	</ui:composition>
+	<h:form styleClass="header">
+		<nav class="navbar navbar-light " style="background-color: #e3f2fd;">
+		<a class="navbar-brand" href="#"> &nbsp;&nbsp;<img
+			src="https://www.logolynx.com/images/logolynx/26/262e3ccd9783d0ddb034f168c288d5af.jpeg"
+			width="30" height="30" class="d-inline-block align-top" alt="" />
+			Health Care
+
+
+		</a>
+		<div class="right">
+			<ul class="nav navbar-nav">
+				<h:outputText value="#{pharma.name}" />
+				<a></a>
+				<h:outputText value="#{date}" />
+			</ul>
+		</div>
+
+		<div class="form-inline">
+			<ul class="nav navbar-nav">
+				<h:commandButton value="Logout" action="#{pDao.logout(pharma)}"
+					class="btn btn-danger" />
+			</ul>
+		</div>
+
+
+		</nav> </h:form>
+</html>

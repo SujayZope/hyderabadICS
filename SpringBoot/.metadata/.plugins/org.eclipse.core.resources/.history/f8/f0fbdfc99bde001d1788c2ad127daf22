@@ -1,0 +1,5 @@
+package com.spring.pharma.serviceImpl;
+
+public class UserServiceImpl {
+
+}

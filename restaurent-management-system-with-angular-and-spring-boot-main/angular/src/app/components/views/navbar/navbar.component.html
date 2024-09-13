@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light " style="background: #24c8c9;">
+  <a class="navbar-brand font" style="cursor: none">User :{{userName}} | Restaurant : {{restaurantName}}</a>
+  <!-- <a class="navbar-brand font" href="#" *ngIf="view ==1" routerLink="/dashboard">Go Back</a> -->
+  <a class="navbar-brand font"  style="cursor: none">Date : {{time | date:'yyyy-MM-dd'}} | Time : {{CurrentTime }}</a>
+<!--  <a class="navbar-brand font" style="cursor: pointer"  (click)="goToCashierAndGoToPos()">{{posAndCashier}}</a>-->
+  <a class="btn btn-primary navbar-brand font" data-bs-toggle="modal1" href="#modal" role="button" >Set Print</a>
+
+  <a class="navbar-brand font" href="#" (click)="logout()">LogOut</a>
+</nav>
+
+<!-- First modal dialog -->
+<div class="modal fade" id="modal1" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      ...
+      <div class="modal-footer">
+        <!-- Toogle to second dialog -->
+        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Open #modal2</button>
+      </div>
+    </div>
+  </div>
+</div>
+

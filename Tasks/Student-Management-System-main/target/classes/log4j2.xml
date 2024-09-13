@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Console appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- Pattern layout for log messages -->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        
+        <!-- File appender -->
+        <File name="File" fileName="D://Hyderabad//Tasks//Student-Management-System-main//src//main//logs//application.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <!-- Root logger -->
+        <Root level="info">
+            <!-- Reference to the Console appender -->
+            <AppenderRef ref="Console"/>
+            <!-- Reference to the File appender -->
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>

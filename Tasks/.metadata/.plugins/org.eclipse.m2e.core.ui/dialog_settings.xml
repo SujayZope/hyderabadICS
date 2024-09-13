@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Hyderabad\Tasks\fleetapp"/>
+			<item value="D:\Hyderabad\Tasks\task-1"/>
+			<item value="D:\Hyderabad\Tasks\ExcelToDb\ExcelToDb"/>
+			<item value="D:\Hyderabad\Tasks\ExportDataToExcel"/>
+			<item value="D:\Hyderabad\Tasks\ExcelToDB"/>
+			<item value="D:\Hyderabad\Tasks\libapi"/>
+			<item value="D:\Hyderabad\Tasks\Student-Management-System-main"/>
+			<item value="D:\Hyderabad\Tasks\sms"/>
+			<item value="D:\Hyderabad\Tasks\HealthCare"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

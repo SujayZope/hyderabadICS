@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+
+<h:form>
+
+	<h1>Doctor Registration Form</h1>
+	<br />
+
+	<p:outputLabel>Doctor Name :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{doctor.docName}">
+	</p:inputText>
+
+
+	<br />
+	<p:outputLabel>Gender : </p:outputLabel>
+						&nbsp;
+						<p:selectOneRadio value="#{doctor.gender}">
+		<f:selectItem itemValue="Male" itemLabel="Male" />
+		<f:selectItem itemValue="Female" itemLabel="Female" />
+		<f:selectItem itemValue="Other" itemLabel="Other" />
+	</p:selectOneRadio>
+
+	<br />
+
+	<p:outputLabel>Age :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{doctor.docAge}">
+	</p:inputText>
+
+	<br />
+
+
+	<p:outputLabel>Address :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{doctor.docAdd}">
+	</p:inputText>
+
+	<br />
+	<p:outputLabel>Specialization :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{doctor.spec}">
+	</p:inputText>
+	<br />
+	<p:outputLabel>Consultation Charges :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{doctor.consltCharge}">
+	</p:inputText>
+	<br />
+	 <input type="file" name="file" value="#{doctor.photoFile}" />
+
+
+	<br />
+	<h:commandButton value="Submit" action="#{pDao.addDoctor(doctor,role)}"
+		class="btn btn-primary"></h:commandButton>
+	<br />
+
+
+</h:form>
+
+
+
+</html>

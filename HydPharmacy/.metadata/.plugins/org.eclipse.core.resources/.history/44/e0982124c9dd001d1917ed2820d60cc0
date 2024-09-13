@@ -1,0 +1,152 @@
+package com.java.pms;
+
+import java.io.IOException;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.hibernate.Criteria;
+
+import org.hibernate.Transaction;
+import org.hibernate.annotations.common.util.impl.LoggerFactory;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
+@ManagedBean(name = "pDao")
+@SessionScoped
+public class PharmacyDaoImpl implements PharmacyDao {
+	
+	private static final Logger LOGGER = (Logger) LogManager.getLogger(PharmacyDaoImpl.class);
+	
+	
+
+   
+	
+	private String errmsg1;
+	private String errmsg2;
+	
+	
+
+	public String getErrmsg2() {
+		return errmsg2;
+	}
+
+	public void setErrmsg2(String errmsg2) {
+		this.errmsg2 = errmsg2;
+	}
+
+	public String getErrmsg1() {
+		return errmsg1;
+	}
+
+	public void setErrmsg1(String errmsg1) {
+		this.errmsg1 = errmsg1;
+	}
+
+	@Override
+	public String AddPharmacyDetail(Pharmacy ph) {
+		try {
+			System.out.println("Good mornig");
+			String encr = EntryptPassword.getCode(ph.getPass());
+			SessionFactory sf = SessionHelper.getConnection();
+			Session session = sf.openSession();
+			ph.setPass(encr);
+			Transaction t = session.beginTransaction();
+			session.save(ph);
+			t.commit();
+//		System.out.println("Record Inserted...");
+			LOGGER.info("Record Inserted");
+			errmsg2 = "Registration Successful.....";
+			return "Login.xhtml?faces-redirect=true";
+		} catch (Exception e) {
+			GlobalExceptionHandler.handleException(e);
+		}
+		return "Login.xhtml?faces-redirect=true";
+	}
+
+	@Override
+	public List<Pharmacy> showPharmacyDetail() {
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria cr = session.createCriteria(Pharmacy.class);
+		List<Pharmacy> phList = cr.list();
+		// for (Pharmacy phar : phList) {
+		// System.out.println(phar.getAddress());
+		// System.out.println("abcd");
+		// }
+		// System.out.println("asdfghjkl;");
+		return phList;
+	}
+
+	@Override
+	public String validateMe(Pharmacy pharmacy) throws IOException {
+		try {
+			errmsg2 = "";
+			Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+			SessionFactory sf = SessionHelper.getConnection();
+			Session session = sf.openSession();
+			Criteria cr = session.createCriteria(Pharmacy.class);
+
+			String encr = EntryptPassword.getCode(pharmacy.getPass());
+			cr.add(Restrictions.eq("username", pharmacy.getUsername()));
+			cr.add(Restrictions.eq("pass", encr.trim()));
+			//cr.setProjection(Projections.rowCount());
+			Pharmacy pharma = (Pharmacy) cr.uniqueResult();
+			//System.out.println("count  " + count);
+			LOGGER.info("Record Inserted");
+			if (pharma != null) {
+				sessionMap.put("pharma",pharma);
+				errmsg1 = "";
+				
+				return "Home.xhtml?faces-redirect=true";
+			}
+
+			else {
+				errmsg1 = "Wrong Username Password. Please try again..!";
+				return "Login.xhtml?faces-redirect=true";
+			}
+		} catch (Exception e) {
+			
+			FacesContext.getCurrentInstance().getExternalContext().redirect("error.xhtml");
+		}
+		return "Login.xhtml?faces-redirect=true";
+		
+	}
+
+	@Override
+	public String logout(Pharmacy pharm) {
+		
+		
+		
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		pharm.setLogouttime(new Date());
+		Transaction t = session.beginTransaction();
+		session.update(pharm);
+		t.commit();
+		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        return "Login.xhtml?faces-redirect=true";
+	}
+	
+	@Override
+	public Pharmacy searchByUserName(String username) {
+
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria cr = session.createCriteria(Pharmacy.class);
+		cr.add(Restrictions.eq("username", username));
+		Pharmacy user = (Pharmacy) cr.uniqueResult();
+		System.out.println("Searched......");
+
+		return user;
+
+	}
+	
+	
+}

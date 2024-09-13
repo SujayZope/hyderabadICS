@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+	<h:form>
+	<h:dataTable value="#{pDao.ShowAllDoctor()}" var="d" border="3">
+	
+	<h:column>
+	<f:facet name="header">Doctor Id</f:facet>
+	<h:outputText value="#{d.docId}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Doctor Name</f:facet>
+	<h:outputText value="#{d.docName}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Gender</f:facet>
+	<h:outputText value="#{d.gender}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Doctor Age</f:facet>
+	<h:outputText value="#{d.docAge}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Doctor Address</f:facet>
+	<h:outputText value="#{d.docAdd}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Doctor Specialization</f:facet>
+	<h:outputText value="#{d.spec}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Doctor consltCharge</f:facet>
+	<h:outputText value="#{d.consltCharge}"/>
+	</h:column>
+	<h:column>
+	<f:facet name="header">Status</f:facet>
+	<h:outputText value="#{d.status}"/>
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header">Doctor Photo</f:facet>
+	<h:graphicImage value="#{d.pic}"/>
+	</h:column>
+	
+
+	</h:dataTable>
+
+
+	</h:form>
+
+</h:body>
+</html>

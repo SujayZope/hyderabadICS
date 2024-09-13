@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- ... your existing code ... -->
+
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<!--<body>
+<h1>Upload Excel File</h1>
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xls">
+    <button type="submit">Upload</button>
+</form>
+</body>-->
+
+<style>
+	body {
+			background-image: url("https://png.pngtree.com/back_origin_pic/03/88/19/883f1b0ddd7c6f341e3357fd964b2bfa.jpg");
+			background-repeat: no-repeat;
+			background-size:cover;
+			background-position: center center;
+			background-attachment: fixed;
+			justify-content: center;
+		    margin:10px;
+			align-items: center;
+		}
+		
+	.codehim-form {
+	padding: 18px;
+	margin-top: 10%;
+		width: 400px;
+		text-align: left;
+		background-color:blanchedalmond;
+		font-size: 18px;
+		color: solid black; 
+    border: 0px black; /* Add a border around the form */
+    border-radius: 20px; /* Add rounded corners to the border */
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 0.2); /* Add a subtle shadow */
+	
+}
+.codehim-form {
+		text-align: left;
+	}
+
+footer {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	font-weight: bold;
+	color: black;
+	font-size: 15px;
+	background-color:yellow;
+	color: black;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.navbar {
+	background-color:crimson;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 13px;
+}
+body {
+  font-size: 20px;
+}
+	</style>
+<body>
+<div>
+<nav class="navbar">
+	<h3>Upload Excel Sheet.....</h3>
+</nav>
+</div>
+<div class="container mt-5">
+	<div th:if="${param.error}">
+                <div class="alert alert-danger" role="alert">
+                    <span th:text="${param.error}"></span>
+                </div>
+            </div>
+  <form class="codehim-form" method="post" action="/upload" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="file">Choose Excel File:</label>
+      <input type="file" class="form-control-file" id="file" name="file" accept=".xlsx, .xls">
+    </div>
+   <br/>
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</div>
+<footer>
+		<marquee behavior="scroll" direction="right" scrollamount="10">
+			@Infinite schools<span style='font-size:20px;'>&#128107;</span></marquee>
+	</footer>
+</body>
+</html>
+

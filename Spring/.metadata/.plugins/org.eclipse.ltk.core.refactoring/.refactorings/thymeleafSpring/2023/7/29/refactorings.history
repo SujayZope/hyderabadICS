@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;thymeleafSpring/src/main/resources/templates/index.html&apos; to &apos;about.html&apos;" description="Rename resource &apos;index.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/index.html" name="about.html" stamp="1689585951416" updateReferences="true"/>
+</session>

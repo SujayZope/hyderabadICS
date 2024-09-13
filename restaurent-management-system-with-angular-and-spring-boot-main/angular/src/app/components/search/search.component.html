@@ -1,0 +1,13 @@
+<input 
+  type="text" 
+  placeholder="search here"
+  (input)="searchPosts($event.target.value)">
+
+<ng-container *ngIf="(searchPosts$ | async) as blogPosts">
+  <p>User posts titles:</p>
+  <ul>
+    <li *ngFor="let blogPost of blogPosts">
+      {{blogPost.title}}
+    </li>
+  </ul>
+</ng-container>

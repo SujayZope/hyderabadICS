@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+</head>
+
+<body>
+	<h1>About LearCodeWith Durgesh</h1>
+	<p>name of the owner is <span th:text="${name}"></span> </p>
+	<p>Length of the name is <span th:text="${#strings.length(name)}"></span> </p>
+	<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+	<h1 th:text="${currentDate}"></h1>
+	<div th:with="a=5,b=67,n=${name}">
+		<h1>Value of a is <span th:text="${a}"></span></h1>
+		<h1 th:text="'Value of b is '+${b}"></h1>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+package com.java.pms;
+
+import java.io.IOException;
+import java.util.List;
+
+public interface PharmacyDao {
+	
+	String AddPharmacyDetail(Pharmacy ph);
+	
+	List<Pharmacy> showPharmacyDetail();
+	
+	String validateMe(Pharmacy pharmacy) throws IOException;
+	
+	String logout(Pharmacy pharm);
+	
+	Pharmacy searchByUserName(String username);
+	
+	
+
+}

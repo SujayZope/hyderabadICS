@@ -1,0 +1,31 @@
+
+*{
+  font-family: something;
+
+  font-weight: bold;
+}
+.dropbtn {
+  background-color:#018989;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.font{
+  font-family: something;
+  font-size: 14px;
+  color: white;
+}
+
+.logout{
+  position: absolute;
+  right: 1%;
+}

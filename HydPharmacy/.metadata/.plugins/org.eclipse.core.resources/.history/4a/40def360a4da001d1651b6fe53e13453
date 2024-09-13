@@ -1,0 +1,17 @@
+package com.java.pms;
+
+import java.util.List;
+
+public interface PharmacyDao {
+	
+	String AddPharmacyDetail(Pharmacy ph);
+	
+	List<Pharmacy> showPharmacyDetail();
+	
+	String validateMe(Pharmacy pharmacy);
+	
+	String logout(Pharmacy pharmacy);
+	
+	
+
+}

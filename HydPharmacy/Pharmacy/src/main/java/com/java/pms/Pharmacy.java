@@ -1,0 +1,144 @@
+package com.java.pms;
+
+import java.util.Date;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+
+@ManagedBean(name = "ph")
+@SessionScoped
+@Entity
+@Table(name = "pharmacy")
+public class Pharmacy {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "userId")
+	private int userId;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "mail")
+	private String mail;
+
+	@Column(name = "mobileNo")
+	private String mobileNo;
+
+	@Column(name = "gender")
+	private String gender;
+
+	@Column(name = "age")
+	private int age;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "pass")
+	private String pass;
+
+	@Column(name = "username")
+	private String username;
+
+	@Column(name = "logouttime")
+	private Date logouttime;
+
+	public Date getLogouttime() {
+		return logouttime;
+	}
+
+	public void setLogouttime(Date logouttime) {
+		this.logouttime = logouttime;
+	}
+
+	
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public String getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+}

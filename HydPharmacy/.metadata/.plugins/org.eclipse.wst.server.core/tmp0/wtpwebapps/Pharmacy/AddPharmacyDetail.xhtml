@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>registration form</title>
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+		crossorigin="anonymous" />
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+
+	<style>
+body {
+	background-image:
+		url("https://wallpapercave.com/wp/wp2595609.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	margin-top: -6%;
+	margin-bottom:3%;
+	margin-right : 10%;
+	align-items: center;
+}
+
+input[type=text]:focus {
+	transition: width 0.4s ease-in-out;
+}
+
+form {
+	display: block;
+	font-family: arial;
+	width: 500px;
+	color: black;
+	font-style: normal;
+	padding: 10px;
+	margin: 10px;
+	font-weight: bold;
+	 
+}
+</style>
+	<h:panelGrid columns="2" border="2" cellpadding="10" cellspacing="2"
+		style="margin-top:130px" bgcolor="white">
+		<h:body>
+
+
+			<center>
+
+
+
+
+
+
+				<h:form>
+
+					<h1>User Registration Form</h1>
+					<br />
+
+					<p:outputLabel>Owner Name :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{ph.name}" styleClass="input-text"
+						id="name1" required="true" requiredMessage="Enter Your Name">
+					</p:inputText>
+					<p:watermark for="name1" value="Your Name"></p:watermark>
+					<h5 style="color: red;">
+						<p:message for="name1" id="name2"></p:message>
+					</h5>
+
+
+					<p:outputLabel>Gender : </p:outputLabel>
+						&nbsp;
+						<p:selectOneRadio value="#{ph.gender}" styleClass="input-text" id="gender"
+						required="true" requiredMessage="Enter Your Gender"
+						alt="gender">
+						<f:selectItem itemValue="Male" itemLabel="Male" />
+					<f:selectItem itemValue="Female" itemLabel="Female" />
+					<f:selectItem itemValue="Other" itemLabel="Other" />
+						</p:selectOneRadio>
+					<h5 style="color: red;">
+						<p:message for="gender" id="gender1"></p:message>
+					</h5>
+					<p:watermark for="gender" value="Gender"></p:watermark>
+					
+					
+					<p:outputLabel>Age :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{ph.age}" styleClass="input-text"
+						id="age" required="true" requiredMessage="Enter Your Age">
+					</p:inputText>
+					<p:watermark for="age" value="Your Age"></p:watermark>
+					<h5 style="color: red;">
+						<p:message for="age" id="age2"></p:message>
+					</h5>
+					
+					<p:outputLabel>Mobile No :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{ph.mobileNo}" styleClass="input-text"
+						id="mno" required="true" requiredMessage="Enter Your Mobile Number">
+						<f:validator validatorId="com.java.pms.PhoneNoValidator"/>
+					</p:inputText>
+					<p:watermark for="mno" value="Your Mobile No"></p:watermark>
+					<h5 style="color: red;">
+						<p:message for="mno" id="mno1"></p:message>
+					</h5>
+					
+					<p:outputLabel>Email Id :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{ph.mail}" styleClass="input-text"
+						id="mail" required="true" requiredMessage="Enter Your Email">
+						<f:validator validatorId="com.java.pms.EmailValidator"/>
+					</p:inputText>
+					<p:watermark for="mail" value="Your Mail"></p:watermark>
+					<h5 style="color: red;">
+						<p:message for="mail" id="mail1"></p:message>
+					</h5>
+					
+						<p:outputLabel>Address :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{ph.address}" styleClass="input-text"
+						id="add" required="true" requiredMessage="Enter Your Address">
+					</p:inputText>
+					<p:watermark for="add" value="Your address"></p:watermark>
+					<h5 style="color: red;">
+						<p:message for="add" id="add1"></p:message>
+					</h5>
+					
+					
+					<p:outputLabel>User Name :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{ph.username}" styleClass="input-text"
+						id="uname" required="true" requiredMessage="Enter Your User name">
+						<f:validator validatorId="com.java.pms.userNameValidator"/>
+					</p:inputText>
+					<p:watermark for="uname" value="Your username"></p:watermark>
+					<h5 style="color: red;">
+						<p:message for="uname" id="uname1"></p:message>
+					</h5>
+					
+					<label>Password:</label>
+					<p:password id="password" required="true" label="password"
+						size="35" requiredMessage="Please enter your New password."
+						match="confirmPassword" value="#{ph.pass}"
+						toggleMask="true" maxlength="13"></p:password>
+					<p:watermark for="password" value="Password *" />
+					<p:message for="password" />
+				
+				<br /><br />
+
+				<label>Confirm Password:</label>
+					<p:password id="confirmPassword" required="true" size="35"
+						requiredMessage="Please confirm New password."
+						validatorMessage="password should contain min 8  and max 13
+						charactors and must contain one special charactoor and 
+						one upper and lower case letter"
+						label="confirmPassword" value="#{ph.pass}" maxlength="13"
+						toggleMask="true" >
+						<f:validateRegex
+							pattern="(?=^.{8,13}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+					</p:password>
+					<p:watermark for="confirmPassword" value="Confirm New password *" />
+					<p:message for="confirmPassword" />
+					
+					<br />
+					<h:commandButton value="Submit" action="#{pDao.AddPharmacyDetail(ph,role)}"
+						class="btn btn-primary" />
+					<br />
+
+					
+
+				</h:form>
+				
+			</center>
+
+
+		</h:body>
+	</h:panelGrid>
+</h:head>
+</html>

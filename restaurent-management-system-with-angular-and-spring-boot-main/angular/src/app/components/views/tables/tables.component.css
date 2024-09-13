@@ -1,0 +1,294 @@
+.loading{
+  padding: 5% 5% 5% 5%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  width: 15px;height: 15px;background: white;
+  border-radius: 50%;
+
+}
+
+.loading span{
+  position: absolute;
+  opacity: 1;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #ff0000;
+  animation-name: ripple;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: scale(0);
+}
+.loading span:nth-child(1){
+  animation-delay: 0.5s;
+}
+.loading span:nth-child(2){
+  animation-delay: 1.2s;
+}
+.loading span:nth-child(3){
+  animation-delay: 1.8s;
+}
+
+.increment_And_dicrement{
+  width: 8%;
+}
+
+.modal-header .close {
+  display:none;
+}
+
+@keyframes ripple {
+  to{
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.btn_adult_and_chlid_form{
+  float: right;
+  margin-left: 5px;
+  background: #34495E;
+}
+.btnaction{
+  padding-left: 3px;
+}
+.btn_table {
+  font-size: 14px;
+  font-family: something;
+  font-weight: bold;
+  width: 100%;
+  color: #006e6f;
+  background: none;
+}
+.btn_table:hover{
+  font-size: 14px;
+  transition-duration: 1s;
+  font-family: something;
+  font-weight: bold;
+  width: 100%;
+  color: #00864b;
+  background: none;
+}
+.tbl-img{
+  position: relative;
+  width: 50%;
+}
+.btn-group-item {
+  border-radius: 5px;
+}
+.inHouseRows:hover{
+  background: #80bdff;
+}
+button {
+  background: #1cb188;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+input{
+  font-weight: bold;
+}
+.kotNumbers:hover{
+  background: lightskyblue;
+  color: #122b40;
+}
+
+button:hover {
+  font-weight: bold;
+  border: none;
+  color: black;
+}
+
+.form-control {
+  border: #1cb188;
+  font-family: Gabriola;
+}
+
+.tbl-h1 {
+  font-size: 15%;
+  color:#e1e1e1;
+  top: 1px;
+  font-style: italic;
+}
+
+.tb-div1 {
+  position: relative;
+  width: 108px;
+  height: 122px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0.2, 0.2, 0.2, 0.2);
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.card{
+
+}
+.tb-div2 {
+  position: relative;
+  width: 95%;
+  height: 70%;
+  background-image: url("../../../../assets/tables/table.jpg.jpg");
+}
+
+.btn-success1 {
+  position: absolute;
+  right: 50%;
+  width: 10px;
+  left: 21%;
+}
+
+
+
+.main-div-class {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+
+}
+
+.main-div-class2 {
+  position: relative;
+  top: 0px;
+  left: 40px;
+  width: 465px;
+  height: 540px;
+  background-color: #d2d6de;
+}
+
+div.ex4 {
+  background-color: white;
+  width: 100%;
+  height: 126%;
+  overflow: auto;
+}
+
+.mainbady {
+  contain: size;
+  position: absolute;
+  width: 100%;
+  padding-top: 10px;
+}
+
+#txtAdult {
+  width: 50%;
+
+}
+
+#txtChid {
+  width: 50%;
+
+}
+
+.box1 img, .box1:after, .box1:before {
+  width: 100%;
+  transition: all .3s ease 0s
+}
+
+.box1 .icon, .box2, .box3, .box4, .box5 .icon li a {
+  text-align: center
+}
+
+.box10:after, .box10:before, .box1:after, .box1:before, .box2 .inner-content:after, .box3:after, .box3:before, .box4:before, .box5:after, .box5:before, .box6:after, .box7:after, .box7:before {
+  content: ""
+}
+
+.box1, .box11, .box12, .box13, .box14, .box16, .box17, .box18, .box2, .box20, .box21, .box3, .box4, .box5, .box5 .icon li a, .box6, .box7, .box8 {
+  overflow: hidden
+}
+
+.box1 .title, .box10 .title, .box4 .title, .box7 .title {
+  letter-spacing: 1px
+}
+
+.box3 .post, .box4 .post, .box5 .post, .box7 .post {
+  font-style: italic
+}
+
+body {
+  background-color: #f1f1f2
+}
+
+.mt-30 {
+  margin-top: 30px
+}
+
+.mt-40 {
+  margin-top: 40px
+}
+
+.mb-30 {
+  margin-bottom: 30px
+}
+
+
+.model-inhouse{
+  height: 350px;
+  overflow-y: scroll
+}
+.guest-modal{
+  width: 100%;
+  font-size: 12px;
+}
+.exit:hover{
+  color: red;
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .table-view{
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .table-view{
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .table-view{
+    margin-top: 2%;
+    margin-left: 1%;
+  }
+}
+
+*{
+  font-family: something;
+
+  font-weight: bold;
+}
+.dropbtn {
+  background-color:white;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.font{
+  font-family: something;
+  font-size: 14px;
+  color: white;
+}
+
+.logout{
+  position: absolute;
+  right: 1%;
+}

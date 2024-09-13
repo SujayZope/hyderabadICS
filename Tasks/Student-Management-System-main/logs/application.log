@@ -1,0 +1,683 @@
+2024-09-06T17:07:38.215+05:30  INFO 6208 --- [restartedMain] c.e.s.StudentManagementSystemApplication : Starting StudentManagementSystemApplication using Java 17.0.7 with PID 6208 (D:\Hyderabad\Tasks\Student-Management-System-main\target\classes started by sujayz in D:\Hyderabad\Tasks\Student-Management-System-main)
+2024-09-06T17:07:38.230+05:30  INFO 6208 --- [restartedMain] c.e.s.StudentManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-06T17:07:38.305+05:30  INFO 6208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-06T17:07:38.306+05:30  INFO 6208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-06T17:07:39.494+05:30  INFO 6208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-06T17:07:39.558+05:30  INFO 6208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2024-09-06T17:07:40.108+05:30  INFO 6208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-09-06T17:07:40.118+05:30  INFO 6208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-06T17:07:40.119+05:30  INFO 6208 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2024-09-06T17:07:40.186+05:30  INFO 6208 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-06T17:07:40.186+05:30  INFO 6208 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1880 ms
+2024-09-06T17:07:40.335+05:30  INFO 6208 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-06T17:07:40.382+05:30  INFO 6208 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2024-09-06T17:07:40.545+05:30  WARN 6208 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-09-06T17:07:40.665+05:30  INFO 6208 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-06T17:07:41.877+05:30 ERROR 6208 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
+	at com.example.sms.StudentManagementSystemApplication.main(StudentManagementSystemApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.1.jar:3.0.1]
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	... 52 common frames omitted
+
+2024-09-06T17:07:41.885+05:30  WARN 6208 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
+	at com.example.sms.StudentManagementSystemApplication.main(StudentManagementSystemApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.1.jar:3.0.1]
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	... 52 common frames omitted
+
+2024-09-06T17:07:41.935+05:30  INFO 6208 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2024-09-06T17:07:42.930+05:30  INFO 6208 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-06T17:07:43.944+05:30 ERROR 6208 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
+	at com.example.sms.StudentManagementSystemApplication.main(StudentManagementSystemApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.1.jar:3.0.1]
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	... 56 common frames omitted
+
+2024-09-06T17:07:43.947+05:30  WARN 6208 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2024-09-06T17:07:43.948+05:30 ERROR 6208 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Public Key Retrieval is not allowed
+2024-09-06T17:07:43.951+05:30 ERROR 6208 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2024-09-06T17:07:43.952+05:30  WARN 6208 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2024-09-06T17:07:43.954+05:30  INFO 6208 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-06T17:07:43.967+05:30  INFO 6208 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-06T17:07:43.989+05:30 ERROR 6208 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.3.jar:6.0.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
+	at com.example.sms.StudentManagementSystemApplication.main(StudentManagementSystemApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.1.jar:3.0.1]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.3.jar:6.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.3.jar:6.0.3]
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:49) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:68) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.3.jar:6.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.3.jar:6.0.3]
+	... 25 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 43 common frames omitted
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	... 56 common frames omitted
+
+2024-09-06T17:08:12.068+05:30  INFO 9928 --- [restartedMain] c.e.s.StudentManagementSystemApplication : Starting StudentManagementSystemApplication using Java 17.0.7 with PID 9928 (D:\Hyderabad\Tasks\Student-Management-System-main\target\classes started by sujayz in D:\Hyderabad\Tasks\Student-Management-System-main)
+2024-09-06T17:08:12.070+05:30  INFO 9928 --- [restartedMain] c.e.s.StudentManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-06T17:08:12.113+05:30  INFO 9928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-06T17:08:12.114+05:30  INFO 9928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-06T17:08:12.623+05:30  INFO 9928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-06T17:08:12.676+05:30  INFO 9928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2024-09-06T17:08:13.166+05:30  INFO 9928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-09-06T17:08:13.174+05:30  INFO 9928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-06T17:08:13.175+05:30  INFO 9928 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2024-09-06T17:08:13.228+05:30  INFO 9928 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-06T17:08:13.228+05:30  INFO 9928 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1114 ms
+2024-09-06T17:08:13.355+05:30  INFO 9928 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-06T17:08:13.397+05:30  INFO 9928 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2024-09-06T17:08:13.529+05:30  WARN 9928 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-09-06T17:08:13.635+05:30  INFO 9928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-06T17:08:13.765+05:30  INFO 9928 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39288427
+2024-09-06T17:08:13.767+05:30  INFO 9928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-06T17:08:13.810+05:30  INFO 9928 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2024-09-06T17:08:14.469+05:30  INFO 9928 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-06T17:08:14.478+05:30  INFO 9928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-06T17:08:14.838+05:30  WARN 9928 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-06T17:08:14.922+05:30  INFO 9928 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-06T17:08:14.962+05:30 DEBUG 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2024-09-06T17:08:15.027+05:30 DEBUG 9928 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-06T17:08:15.053+05:30  INFO 9928 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6fe8cab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bbadf22, org.springframework.security.web.context.SecurityContextHolderFilter@6c1d877, org.springframework.security.web.header.HeaderWriterFilter@26f860b7, org.springframework.security.web.authentication.logout.LogoutFilter@455fec52, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@29788a3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@481d9e0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5745eec7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c34a130, org.springframework.security.web.access.ExceptionTranslationFilter@28a36600, org.springframework.security.web.access.intercept.AuthorizationFilter@49919b2f]
+2024-09-06T17:08:15.099+05:30 DEBUG 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-06T17:08:15.128+05:30 DEBUG 9928 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-06T17:08:15.235+05:30  INFO 9928 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-06T17:08:15.273+05:30  INFO 9928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-06T17:08:15.281+05:30  INFO 9928 --- [restartedMain] c.e.s.StudentManagementSystemApplication : Started StudentManagementSystemApplication in 3.549 seconds (process running for 4.229)
+2024-09-06T17:08:26.142+05:30  INFO 9928 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-06T17:08:26.143+05:30  INFO 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-06T17:08:26.144+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-06T17:08:26.145+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-06T17:08:26.145+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-06T17:08:26.148+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4a387c0a
+2024-09-06T17:08:26.150+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@57117f58
+2024-09-06T17:08:26.151+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-06T17:08:26.151+05:30  INFO 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2024-09-06T17:08:26.192+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:26.193+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:26.194+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:26.200+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-09-06T17:08:26.201+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:26.227+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:08:26.493+05:30  WARN 9928 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][index] Deprecated unwrapped fragment expression "fragments/header::header" found in template index, line 55, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:26.638+05:30  WARN 9928 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][index] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template index, line 64, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:26.659+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:08:27.454+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T17:08:27.456+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T17:08:27.457+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T17:08:27.458+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2024-09-06T17:08:27.458+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T17:08:27.465+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-09-06T17:08:27.466+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-09-06T17:08:27.472+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-09-06T17:08:27.473+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-09-06T17:08:27.474+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-09-06T17:08:27.474+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-09-06T17:08:27.475+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-09-06T17:08:27.505+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2024-09-06T17:08:27.506+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Sep 06 17:08:27 IST 2024, status=404, error=Not Found, message=No message available,  (truncated)...]
+2024-09-06T17:08:27.574+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-09-06T17:08:29.931+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:29.932+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:29.933+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:29.933+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-09-06T17:08:29.933+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:08:29.934+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:08:29.937+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][index] Deprecated unwrapped fragment expression "fragments/header::header" found in template index, line 55, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:29.940+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][index] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template index, line 64, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:29.944+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:08:30.448+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:30.448+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:30.448+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:30.448+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/signin", parameters={}
+2024-09-06T17:08:30.449+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:30.451+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:08:30.475+05:30  WARN 9928 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:30.506+05:30  WARN 9928 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:30.510+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:08:30.928+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#createStudentForm(Model)
+2024-09-06T17:08:30.928+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#createStudentForm(Model)
+2024-09-06T17:08:30.928+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#createStudentForm(Model)
+2024-09-06T17:08:30.929+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register", parameters={}
+2024-09-06T17:08:30.929+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#createStudentForm(Model)
+2024-09-06T17:08:30.939+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:08:30.979+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][create_student] Deprecated unwrapped fragment expression "fragments/header::header" found in template create_student, line 99, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:31.007+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][create_student] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template create_student, line 160, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:31.011+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:08:33.415+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:33.416+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:33.416+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:33.416+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/signin", parameters={}
+2024-09-06T17:08:33.416+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:33.417+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:08:33.419+05:30  WARN 9928 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:33.423+05:30  WARN 9928 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:33.426+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:08:39.969+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:39.970+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:39.970+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:39.970+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/signin?error", parameters={masked}
+2024-09-06T17:08:39.970+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:08:39.972+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:08:39.974+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:39.978+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:08:39.981+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:09:27.048+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showForgotPasswordForm(Model)
+2024-09-06T17:09:27.049+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showForgotPasswordForm(Model)
+2024-09-06T17:09:27.049+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showForgotPasswordForm(Model)
+2024-09-06T17:09:27.049+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/forgot-password", parameters={}
+2024-09-06T17:09:27.049+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showForgotPasswordForm(Model)
+2024-09-06T17:09:27.051+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:09:27.074+05:30  WARN 9928 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][forgot_password] Deprecated unwrapped fragment expression "fragments/header::header" found in template forgot_password, line 34, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:09:27.077+05:30  WARN 9928 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][forgot_password] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template forgot_password, line 67, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:09:27.079+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:09:29.094+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processForgotPassword(Student, HttpServletRequest, Model)
+2024-09-06T17:09:29.094+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processForgotPassword(Student, HttpServletRequest, Model)
+2024-09-06T17:09:29.095+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processForgotPassword(Student, HttpServletRequest, Model)
+2024-09-06T17:09:29.095+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/forgot-password", parameters={masked}
+2024-09-06T17:09:29.095+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processForgotPassword(Student, HttpServletRequest, Model)
+2024-09-06T17:09:33.759+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:09:33.775+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:09:37.536+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:09:37.537+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:09:37.537+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:09:37.537+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-09-06T17:09:37.537+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#index()
+2024-09-06T17:09:37.538+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:09:37.539+05:30  WARN 9928 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][index] Deprecated unwrapped fragment expression "fragments/header::header" found in template index, line 55, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:09:37.541+05:30  WARN 9928 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][index] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template index, line 64, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:09:37.544+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:09:54.057+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showResetPasswordForm(String, Model)
+2024-09-06T17:09:54.058+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showResetPasswordForm(String, Model)
+2024-09-06T17:09:54.058+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showResetPasswordForm(String, Model)
+2024-09-06T17:09:54.058+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/reset-password?token=dc9e950a-9019-461b-81f5-e7b65c1ea5d1", parameters={masked}
+2024-09-06T17:09:54.059+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#showResetPasswordForm(String, Model)
+2024-09-06T17:09:54.082+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:09:54.126+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][reset_password] Deprecated unwrapped fragment expression "fragments/header::header" found in template reset_password, line 73, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:09:54.129+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][reset_password] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template reset_password, line 109, col 7. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:09:54.132+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:07.193+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processResetPassword(String, String)
+2024-09-06T17:10:07.193+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processResetPassword(String, String)
+2024-09-06T17:10:07.194+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processResetPassword(String, String)
+2024-09-06T17:10:07.194+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/reset-password", parameters={masked}
+2024-09-06T17:10:07.194+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#processResetPassword(String, String)
+2024-09-06T17:10:07.285+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:07.301+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:08.715+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:10:08.716+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:10:08.716+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:10:08.716+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/signin", parameters={}
+2024-09-06T17:10:08.716+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:10:08.717+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:08.718+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:08.720+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:08.722+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:15.624+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:10:15.624+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/admin/", parameters={}
+2024-09-06T17:10:15.625+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:10:15.629+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:15.646+05:30  WARN 9928 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][admin/home] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/home, line 40, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:15.667+05:30  WARN 9928 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][admin/home] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/home, line 47, col 6. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:15.670+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:17.437+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:10:17.437+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/admin/books", parameters={}
+2024-09-06T17:10:17.437+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:10:17.441+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:17.463+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/uploadBooks, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:17.465+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/uploadBooks, line 86, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:17.467+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:18.363+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:10:18.364+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/", parameters={}
+2024-09-06T17:10:18.364+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:10:18.368+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:18.369+05:30  WARN 9928 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][admin/home] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/home, line 40, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:18.370+05:30  WARN 9928 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][admin/home] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/home, line 47, col 6. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:18.372+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:18.835+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:10:18.835+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/admin/books", parameters={}
+2024-09-06T17:10:18.836+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:10:18.841+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:18.843+05:30  WARN 9928 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/uploadBooks, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:18.845+05:30  WARN 9928 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/uploadBooks, line 86, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:18.848+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:19.161+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#listStudents(Model)
+2024-09-06T17:10:19.161+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/admin/show", parameters={}
+2024-09-06T17:10:19.161+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#listStudents(Model)
+2024-09-06T17:10:19.165+05:30  INFO 9928 --- [http-nio-8080-exec-1] c.e.sms.service.impl.StudentServiceImpl  : Info message
+2024-09-06T17:10:19.166+05:30  WARN 9928 --- [http-nio-8080-exec-1] c.e.sms.service.impl.StudentServiceImpl  : Warning message
+2024-09-06T17:10:19.166+05:30 ERROR 9928 --- [http-nio-8080-exec-1] c.e.sms.service.impl.StudentServiceImpl  : Error message
+2024-09-06T17:10:19.173+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:19.186+05:30  WARN 9928 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][admin/students] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/students, line 59, col 8. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:19.200+05:30  WARN 9928 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][admin/students] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/students, line 107, col 8. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:19.201+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:21.317+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:10:21.318+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/admin/books", parameters={}
+2024-09-06T17:10:21.318+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:10:21.321+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:21.323+05:30  WARN 9928 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/uploadBooks, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:21.324+05:30  WARN 9928 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/uploadBooks, line 86, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:21.327+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:10:21.617+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:10:21.617+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/admin/", parameters={}
+2024-09-06T17:10:21.617+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:10:21.620+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:10:21.621+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][admin/home] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/home, line 40, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:21.623+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][admin/home] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/home, line 47, col 6. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:10:21.629+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:24.816+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:13:24.817+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/admin/books", parameters={}
+2024-09-06T17:13:24.817+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:13:24.821+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:24.823+05:30  WARN 9928 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/uploadBooks, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:24.825+05:30  WARN 9928 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/uploadBooks, line 86, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:24.827+05:30 DEBUG 9928 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:25.219+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#listStudents(Model)
+2024-09-06T17:13:25.219+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/admin/show", parameters={}
+2024-09-06T17:13:25.219+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#listStudents(Model)
+2024-09-06T17:13:25.223+05:30  INFO 9928 --- [http-nio-8080-exec-7] c.e.sms.service.impl.StudentServiceImpl  : Info message
+2024-09-06T17:13:25.223+05:30  WARN 9928 --- [http-nio-8080-exec-7] c.e.sms.service.impl.StudentServiceImpl  : Warning message
+2024-09-06T17:13:25.223+05:30 ERROR 9928 --- [http-nio-8080-exec-7] c.e.sms.service.impl.StudentServiceImpl  : Error message
+2024-09-06T17:13:25.228+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:25.230+05:30  WARN 9928 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][admin/students] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/students, line 59, col 8. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:25.235+05:30  WARN 9928 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][admin/students] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/students, line 107, col 8. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:25.236+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:25.819+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:13:25.819+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/admin/books", parameters={}
+2024-09-06T17:13:25.819+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#booksForm()
+2024-09-06T17:13:25.822+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:25.824+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/uploadBooks, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:25.826+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][admin/uploadBooks] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/uploadBooks, line 86, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:25.828+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:26.501+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:13:26.501+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/admin/", parameters={}
+2024-09-06T17:13:26.501+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.AdminController#home()
+2024-09-06T17:13:26.504+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:26.505+05:30  WARN 9928 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][admin/home] Deprecated unwrapped fragment expression "admin/header::header" found in template admin/home, line 40, col 7. Please use the complete syntax of fragment expressions instead ("~{admin/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:26.507+05:30  WARN 9928 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][admin/home] Deprecated unwrapped fragment expression "admin/footer::footer" found in template admin/home, line 47, col 6. Please use the complete syntax of fragment expressions instead ("~{admin/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:26.509+05:30 DEBUG 9928 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:27.248+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:27.248+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:27.249+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:27.250+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/signin?logout", parameters={masked}
+2024-09-06T17:13:27.250+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:27.259+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:27.261+05:30  WARN 9928 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:27.263+05:30  WARN 9928 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:27.265+05:30 DEBUG 9928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:39.053+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:39.054+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:39.054+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:39.054+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/signin?error", parameters={masked}
+2024-09-06T17:13:39.054+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:39.055+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:39.056+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:39.057+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:39.059+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:13:46.926+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:46.926+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:46.927+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:46.927+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/signin?error", parameters={masked}
+2024-09-06T17:13:46.927+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:13:46.928+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:13:46.929+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:46.931+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:13:46.932+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:14:32.886+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:32.886+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:32.886+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:32.886+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/signin?error", parameters={masked}
+2024-09-06T17:14:32.886+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:32.887+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:14:32.888+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:14:32.889+05:30  WARN 9928 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:14:32.890+05:30 DEBUG 9928 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:14:43.574+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:43.574+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:43.574+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:43.574+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/signin?error", parameters={masked}
+2024-09-06T17:14:43.574+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:14:43.575+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:14:43.575+05:30  WARN 9928 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:14:43.577+05:30  WARN 9928 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:14:43.578+05:30 DEBUG 9928 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:15:19.999+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:19.999+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:19.999+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/students/", parameters={}
+2024-09-06T17:15:19.999+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:20.002+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:15:20.017+05:30  WARN 9928 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][user/home] Deprecated unwrapped fragment expression "user/header::header" found in template user/home, line 28, col 7. Please use the complete syntax of fragment expressions instead ("~{user/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:20.030+05:30  WARN 9928 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][user/home] Deprecated unwrapped fragment expression "user/footer::footer" found in template user/home, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{user/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:20.032+05:30 DEBUG 9928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:15:21.731+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:21.731+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:21.731+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/students/", parameters={}
+2024-09-06T17:15:21.731+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:21.734+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:15:21.736+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][user/home] Deprecated unwrapped fragment expression "user/header::header" found in template user/home, line 28, col 7. Please use the complete syntax of fragment expressions instead ("~{user/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:21.737+05:30  WARN 9928 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][user/home] Deprecated unwrapped fragment expression "user/footer::footer" found in template user/home, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{user/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:21.740+05:30 DEBUG 9928 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:15:22.339+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#getAllBooks(Model)
+2024-09-06T17:15:22.339+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#getAllBooks(Model)
+2024-09-06T17:15:22.340+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/students/books/all", parameters={}
+2024-09-06T17:15:22.340+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#getAllBooks(Model)
+2024-09-06T17:15:22.365+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:15:22.378+05:30  WARN 9928 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][user/books] Deprecated unwrapped fragment expression "user/header::header" found in template user/books, line 61, col 8. Please use the complete syntax of fragment expressions instead ("~{user/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:22.381+05:30  WARN 9928 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][user/books] Deprecated unwrapped fragment expression "user/footer::footer" found in template user/books, line 96, col 8. Please use the complete syntax of fragment expressions instead ("~{user/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:22.382+05:30 DEBUG 9928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:15:23.966+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:23.966+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:23.967+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/students/", parameters={}
+2024-09-06T17:15:23.967+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.StudentController#home()
+2024-09-06T17:15:23.970+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:15:23.972+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][user/home] Deprecated unwrapped fragment expression "user/header::header" found in template user/home, line 28, col 7. Please use the complete syntax of fragment expressions instead ("~{user/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:23.973+05:30  WARN 9928 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][user/home] Deprecated unwrapped fragment expression "user/footer::footer" found in template user/home, line 38, col 7. Please use the complete syntax of fragment expressions instead ("~{user/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:23.974+05:30 DEBUG 9928 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:15:24.959+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:15:24.959+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:15:24.959+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:15:24.959+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/signin?logout", parameters={masked}
+2024-09-06T17:15:24.959+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.sms.controller.HomeController#login()
+2024-09-06T17:15:24.961+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T17:15:24.962+05:30  WARN 9928 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][login] Deprecated unwrapped fragment expression "fragments/header::header" found in template login, line 37, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header::header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:24.963+05:30  WARN 9928 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][login] Deprecated unwrapped fragment expression "fragments/footer::footer" found in template login, line 86, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/footer::footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-09-06T17:15:24.964+05:30 DEBUG 9928 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T17:15:40.519+05:30  INFO 9928 --- [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-09-06T17:15:40.531+05:30  INFO 9928 --- [RMI TCP Connection(18)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-06T17:15:40.532+05:30  INFO 9928 --- [RMI TCP Connection(18)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-06T17:15:40.538+05:30  INFO 9928 --- [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-06T17:15:40.541+05:30  INFO 9928 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-06T17:15:40.547+05:30  INFO 9928 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

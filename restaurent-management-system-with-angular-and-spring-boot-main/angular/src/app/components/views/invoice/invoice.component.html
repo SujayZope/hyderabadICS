@@ -1,0 +1,55 @@
+<!-- <table id="table" style="width:100%;font-family: something;margin-left: 0.5%;" class="table-borderless" >
+    <tr class="title" style="font-size: 12px;background-color: #D5DBDB " *ngIf="itemQu.length !=0" >
+      <th>Items</th>
+      <th>QTY</th>
+      <th>Price</th>
+      
+      
+    </tr>
+    <tbody style="font-size: 11px">
+      <tr class="side-bar-table" style="font-family: something" *ngFor ="let Object of itemQu;">
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">{{Object.item.name}}</p>
+        </td>
+        <td align="center">
+          <p align="center" >{{Object.numbersOfItems}}</p>
+        </td>
+        <td style="text-align: center">
+          <p align="center">{{(Object.item.price * Object.numbersOfItems).toFixed(2)}}</p>
+        </td>
+        
+        
+      </tr>
+      <tr class="table-secondary" style="font-family: something" *ngIf="itemQu.length !=0">
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">Primary Payment method & Amount</p>
+        </td>
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">{{selectCardTypePrimary}}</p>
+        </td>
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">{{primaryPayAmount | currency: 'Rs ' }}</p>
+        </td>
+      </tr>
+      <tr class="table-secondary" style="font-family: something" *ngIf="itemQu.length !=0">
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">Secondary Payment method & Amount</p>
+        </td>
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">{{selectCardTypeSecondary}}</p>
+        </td>
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">{{calcSecondaryPayAmount | currency: 'Rs ' }}</p>
+        </td>
+      </tr>
+      <tr class="table-secondary" style="font-family: something" *ngIf="itemQu.length !=0">
+        <td>
+          <p style="height: 12px; text-align: left;width: 160px">Total :</p>
+        </td>
+        <td colspan="6">
+          <p style="height: 12px; text-align: right;width: 160px">{{netAmount.toFixed(2)}}</p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table> -->

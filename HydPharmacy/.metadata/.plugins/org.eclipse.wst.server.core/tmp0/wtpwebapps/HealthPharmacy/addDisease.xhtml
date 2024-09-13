@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	
+	
+	<h:form>
+
+					<h1>Disease Registration Form</h1>
+					<br />
+
+					<p:outputLabel>Disease Name :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{disease.disName}">
+					</p:inputText>
+					
+					<p:outputLabel>disease symptoms :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{disease.sym}">
+					</p:inputText>
+					
+					<p:outputLabel>Charges :  </p:outputLabel>
+						&nbsp;
+						<p:inputText value="#{disease.charge}">
+					</p:inputText>
+					
+					
+					<br />
+					<h:commandButton value="Submit" action="#{pDao.addDisease(disease)}"
+						class="btn btn-primary" ></h:commandButton>
+					<br />
+					
+
+				</h:form>
+	
+	
+	
+	
+</html>

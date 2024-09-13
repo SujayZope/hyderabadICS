@@ -1,0 +1,12 @@
+127.0.0.1 - - [12/Jun/2023:11:28:18 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/Login.xhtml HTTP/1.1" 200 6442
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/jquery/jquery.js;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 89756
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/primeicons/primeicons.css;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 11199
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/core.js;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 89155
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/jquery/jquery-plugins.js;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 146589
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/watermark/watermark.js;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 323
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/jsf.js?ln=javax.faces&stage=Development HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/components.js;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 492154
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:19 +0530] "GET /Pharmacy/faces/javax.faces.resource/components.css;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces&v=12.0.0 HTTP/1.1" 200 108055
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:20 +0530] "GET /Pharmacy/faces/javax.faces.resource/theme.css;jsessionid=8A1A67C08DB8C3B515571B34EC51C74A?ln=primefaces-saga&v=12.0.0 HTTP/1.1" 200 199176
+0:0:0:0:0:0:0:1 - - [12/Jun/2023:11:28:20 +0530] "GET /favicon.ico HTTP/1.1" 404 1016

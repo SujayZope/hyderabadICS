@@ -1,0 +1,325 @@
+<app-navbar></app-navbar>
+<div class="">
+</div>
+<div style="margin-top: 0.1%;background-color:white;">
+  <div class="row">
+      <div class="table-wrapper-scroll-y my-custom-scrollbar" style="margin-left: 1.5%" >
+        <table style="width:100%;font-family: something;" >
+          <tr class="title" style="font-size: 12px;background-color: #92dfd4 " *ngIf="itemQu.length !=0" >
+            <th>Items</th>
+            <th>QTY</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+          <tbody style="font-size: 11px">
+            <tr class="side-bar-table" style="font-family: something" *ngFor ="let Object of itemQu;">
+              <td>
+                <p style="height: 12px; text-align: left;width: 160px">{{Object.item.name}}</p>
+              </td>
+              <td align="center">
+                <p align="center" >{{Object.numbersOfItems}}</p>
+              </td>
+              <td style="text-align: center">
+                <p align="center">{{(Object.item.price * Object.numbersOfItems).toFixed(2)}}</p>
+              </td>
+              <td >
+                <button class="action_button"  (click)="incrementAddedItem(Object)"
+                        style="background: #87d388;width:30px;height:30px; font-weight: bold"><i class="fas fa-plus-square"></i>
+                </button>
+                <button class="action_button"  (click)="decrementAddedItem(Object)"
+                        style="background: #b9acc9;width:30px;height:30px;font-weight: bold;margin-left: 2px;"><i class="fas fa-minus-square"></i>
+                </button>
+                <button class="action_button"  *ngIf="Object.updateStatus !=true" (click)="removeItem(Object)"
+                        style="background: #ecc2a9 ;width:30px;height:30px;font-weight: bold;margin-left: 2px;"><i class="fas fa-trash-alt"></i>
+
+                </button>
+                <button class="action_button"  *ngIf="Object.updateStatus !=false" (click)="setTempDto(Object)"
+                        data-target="#exampleModalCenter" data-toggle="modal"
+                        style="background: #ecc2a9;height:30px;font-weight: bold;margin-left: 2px;"><i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+    </div>
+    <!-- the payment method selection and bill seperation -->
+    <div class="col-3">
+      <table class="table table-secondary" style="width:100%;font-family: 'something';margin-left: 0.5%;" >
+        <tbody style="font-size: 14px">
+          <tr class="table-secondary"  *ngIf="itemQu.length !=0"
+              style="height: 6px;font-size: 16px">
+            <td><label class="badge badge-secondary">Payment Methods</label></td>
+          </tr>
+          <!-- Selecting the card type -->
+          <tr class="table-secondary"  *ngIf="itemQu.length !=0"
+              style="font-weight: bold;color: Black;height: 6px;font-size: 16px">
+            <td>
+              <div><p>Primary</p></div>
+              <div>
+                <select (change)="selectChangedHandlerPri($event)" id="primarySelectedType" class="custom-select">
+                  <option value="Cash">Cash</option>
+                  <option value="Visa">Visa</option>
+                  <option value="Mastercard">Mastercard</option>
+                  <option value="AmEx">AmEx</option>
+                </select>
+              </div>
+              <br>
+              <div>
+                <input type="text" value="{{primaryPayAmount | currency: 'Rs ' }}" (keyup.enter)="calculateSecondaryPayAmount($event)" class="form-control" />
+              </div>
+            </td>
+            <td>
+              <div><p>Secondary</p></div>
+              <div>
+                <select (change)="selectChangedHandlerSec($event)" id="secondarySelectedType" class="custom-select">
+                  <option value="Cash">Cash</option>
+                  <option value="Visa">Visa</option>
+                  <option value="Mastercard">Mastercard</option>
+                  <option value="AmEx">AmEx</option>
+                </select>
+              </div><br>
+              <div>
+                <input type="text" value="{{calcSecondaryPayAmount | currency: 'Rs ' }}" disabled class="form-control"/>
+              </div>
+            </td>
+          </tr>
+          <tr *ngIf="itemQu.length !=0">
+            <td></td>
+
+
+          </tr>
+          <tr  *ngIf="itemQu.length !=0">
+            <td>
+              <button class="btn btn-success payment_bill_action_button"> <i class="fas fa-eraser"></i>_Remove All</button>
+            </td>
+            <td>
+              <button class="btn btn-success payment_bill_action_button" (click)="printBill()"><i class="fas fa-print"></i>_Print Bill</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--printSectionId="print-section"-->
+
+
+      <table class="table table-secondary" style="width:100%;font-family: something;margin-left: 0.5%;" >
+        <tbody style="font-size: 14px">
+
+          <tr class="table-secondary"  *ngIf="itemQu.length !=0"
+              style="font-weight: bold;color: Black;height: 6px;font-size: 16px">
+            <td colspan="3">GROSS AMOUNT</td>
+            <td>{{netAmount.toFixed(2)}}</td>
+          </tr>
+          <tr class="table-secondary" *ngIf="itemQu.length !=0"
+              style="font-weight: bold;color: Black;height: 6px;font-size: 16px">
+            <td colspan="3">DISCOUNT</td>
+            <td>{{discountPrice.toFixed(2)}}</td>
+          </tr>
+          <tr class="table-secondary" *ngIf="itemQu.length !=0"
+              style="font-weight: bold;color: Black;height: 6px;font-size: 16px">
+            <td colspan="3">TAX</td>
+            <td>{{taxWithPrice.toFixed(2)}}</td>
+          </tr>
+          <tr class="table-secondary" *ngIf="itemQu.length !=0"
+              style="font-weight: bold;color: Black;height: 6px;font-size: 16px">
+            <td colspan="3">NET AMOUNT</td>
+            <td>{{netAmount.toFixed(2)}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!--<table id="print-section" style="font-family: something;margin-left: 0.5%;width: 226px" class="table-borderless"  *ngIf="itemQu.length !=0">
+        <tr class="title" style="font-size: 10px;background-color: #dbd4b9 " *ngIf="isOkayToPrint">
+          <td  align="center">
+            Welcome to Supermarket
+          </td>
+        </tr>
+        <tr class="title" style="font-size: 10px;background-color: #D5DBDB " *ngIf="isOkayToPrint">
+          <td  align="center">
+            Date : {{time | date:'yyyy-MM-dd'}} | Time : {{CurrentTime }}
+          </td>
+        </tr>
+        <tr class="title" style="font-size: 10px;background-color: #D5DBDB " *ngIf="isOkayToPrint">
+          <td  align="center">
+            Bambalapitiya Branch
+          </td>
+        </tr>
+        <tr class="title" style="font-size: 8px;background-color: #D5DBDB " *ngIf="isOkayToPrint">
+          <th>Items</th>
+          <th>QTY</th>
+          <th>Price</th>
+           <th>Total</th>
+
+        </tr>
+        <tbody style="font-size: 11px">
+          <tr class="side-bar-table" style="font-family: something;padding: auto;margin: auto" *ngFor ="let Object of itemQu;">
+            <td>
+              <p style="height: 12px; text-align: left;">{{Object.item.name}}</p>
+            </td>
+            <td align="center">
+              <p align="center" >{{Object.numbersOfItems}}</p>
+            </td>
+            <td style="text-align: right">
+              <p align="center">{{(Object.item.price).toFixed(2)}}</p>
+            </td>
+            <td style="text-align: right">
+              <p align="center">{{(Object.item.price * Object.numbersOfItems).toFixed(2)}}</p>
+            </td>
+          </tr>
+          <tr class="table-secondary" style="font-family: something" *ngIf="isOkayToPrint">
+            <td></td>
+            <td></td>
+            <td align="left">
+              {{selectCardTypePrimary}}
+            </td>
+            <td align="right" style="text-align: right">
+              {{primaryPayAmount | currency: 'Rs ' }}
+            </td>
+          </tr>
+        </tbody>
+      </table>-->
+    </div>
+
+    <div class="col-6" style="margin-left: 50%;padding-top: 0px;margin-top: 0px;font-family: something;position: absolute;padding-right: 0px">
+      <div style="padding-top: 2px;">
+        <input class="form-control text-item-search" type="text" name="search" [(ngModel)]="search" autocomplete="off" placeholder="Search for an Item">
+        <select   class="custom-select" [disabled]="isVisible3">
+          <option  *ngFor="let Obj of mainResRoomsList2" (click)="set_tables(Obj.restaurantId)">{{Obj.rName}}</option>
+        </select>
+      </div>
+      <div >
+        <table class="item-table">
+          <tr>
+            <th>ItemCode</th>
+            <th>Item Name </th>
+            <th>ItemPrice</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let item of MItemArray | filter:search">
+            <td style="text-align: left" (click)="addNewItems(item)">{{item.barCode}}</td>
+            <td style="text-align: left" (click)="addNewItems(item)">{{item.name}}</td>
+            <td style="text-align: center;width: 150px" (click)="addNewItems(item)">{{item.price | currency: 'Rs ' }}</td>
+            <td>
+              <button class="action_button " (click)="addNewItems(item)">ADD
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal for remove note-->
+    <div class="col modal fade reason-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true" style="font-family: something">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header" style="height: 50px;background-color: #dbd4b9 ">
+            <h5 style="font-weight: bold">Choose a Reason</h5>
+            <h5 class="exit"><i class="fas fa-times-circle"  data-dismiss="modal"></i></h5>
+          </div>
+
+          <div class="modal-body">
+            <table style="margin-left:5%">
+              <tr>
+                <!-- Example single danger button -->
+                <div class="btn-group" style="width: 180%">
+                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" style="width: 180%">Reason
+                  </button>
+                  <div class="dropdown-menu" >
+                    <a class="dropdown-item"  *ngFor ="let reason of ReasonsList;" (click)="setReasonForTextArea(reason)">{{reason.reason}}</a>
+                  </div>
+                </div>
+              </tr>
+              <br>
+              <tr>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="width: 180%"  placeholder="Enter Reason Here :" [(ngModel)]="mVoidReasonDTO.reason" [ngModelOptions]="{standalone: true}"></textarea>
+              </tr>
+              <br>
+              <tr>
+                <button type="button" class="btn btn-default" data-dismiss="modal"  (click)="removeItem(tempDto)"
+                        style="width: 180%;background-color: #F1948A ">Remove Item
+                </button>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- Discount Pop Up -->
+    <div class="col modal fade" id="discountPopUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true" style="font-family: something">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Select Discount</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="" style="position: absolute" *ngIf="disList.length==0">
+              <tr *ngFor="let Object of discountNameList">
+                <p>
+                <td style="text-align: left">{{Object}}</td>
+                </p>
+              </tr>
+            </table>
+            <table class="" style="margin-left: 200px" *ngIf="disList.length==0">
+              <tr *ngFor="let Object of viewDiscountList">
+                <td *ngFor="let Obj of Object" style="padding-right: 10px;text-align: left">
+                  <fieldset [id]="Obj.familyNo"  >
+                    <p>
+                      <input type="radio"
+                             value="value1" [name]="Obj.familyNo" [checked]="Obj.disValue===Obj.disPercentage"  (click)="setDiscount(Obj)"> {{Obj.disPercentage}}%
+                    </p>
+                  </fieldset>
+                </td>
+              </tr>
+            </table>
+            <table class="" style="position: absolute" *ngIf="disList.length !=0">
+              <tr *ngFor="let Object of discountNameList">
+                <p>
+                <td style="text-align: left">{{Object}}</td>
+                </p>
+              </tr>
+            </table>
+            <table class="" style="margin-left: 200px" *ngIf="disList.length !=0">
+              <tr *ngFor="let Object of viewDiscountList">
+                <td *ngFor="let Obj of Object" style="padding-right: 10px;text-align: left">
+                  <fieldset [id]="Obj.familyNo"  *ngFor="let Ob of disList">
+                    <p *ngIf="Ob.fId === Obj.familyNo">
+                      <input type="radio" value="value1" [name]="Obj.familyNo"  [checked]="Ob.percentage===Obj.disPercentage" (click)="setDiscount(Obj)">{{Obj.disPercentage}}%
+                    </p>
+                  </fieldset>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success"  data-dismiss="modal" (click)="setDiscountForSubmitOrder()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

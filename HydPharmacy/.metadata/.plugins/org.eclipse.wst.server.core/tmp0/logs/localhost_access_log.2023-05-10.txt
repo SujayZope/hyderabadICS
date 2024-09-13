@@ -1,0 +1,4 @@
+127.0.0.1 - - [10/May/2023:10:50:01 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [10/May/2023:10:50:01 +0530] "GET /HealthPharmacy/faces/uplPic.xhtml HTTP/1.1" 500 98474
+0:0:0:0:0:0:0:1 - - [10/May/2023:10:50:01 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [10/May/2023:10:50:07 +0530] "GET /HealthPharmacy/faces/uplPic.xhtml HTTP/1.1" 500 98560
